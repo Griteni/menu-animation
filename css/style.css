@@ -1,0 +1,151 @@
+body{
+    background: url("../house.jpg") no-repeat;
+    background-size: contain;
+}
+p,a,h2,label,input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    text-decoration: none;
+}
+header{
+    box-shadow: 3px 3px 9px 1px rgba(52,67,86,0.52);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    padding-right: 38px;
+}
+
+.logo a{
+    color: white;
+    height:100%;
+    padding:16px;   
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    color: white;
+}
+nav input[type=checkbox]{
+    display: none;
+}
+label{
+    color: white;
+}
+input[type=checkbox]:checked ~ ul {
+    display: block;
+    color: white;
+}
+
+nav ul{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 10;
+    margin: 0;
+
+}
+nav ul li a{
+    display: block;
+    position: relative;
+    overflow: visible;
+    color: black;
+} 
+ 
+main{
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    flex-direction: column; 
+}
+h1{
+    color: white;
+    margin: 0 auto;
+}
+
+.scrolly{     
+    width:100px;     
+    height: 150px;     
+    border-radius: 100px;     
+    border:5px solid white; 
+    margin: 0 auto;     
+    overflow: hidden; }  
+
+.dot{     
+    width: 30px;     
+    height: 30px;     
+    border-radius: 100px;     
+    background-color: white;     
+    margin: 10px auto;     
+    position: relative;     
+    animation-name: scroll-down;     
+    animation-duration: 2s;     
+    animation-timing-function: linear;     
+    /* animation-timing-function: cubic-bezier(.02,1.32,.75,-0.18);      */
+    animation-iteration-count: infinite; } 
+    
+    @keyframes scroll-down{     
+        /* from{         
+            top:-15px;     
+        }     
+        to{
+            top:150px;         
+            opacity: 0;     
+        }   */
+        0%{
+            top:-50px;
+            background-color: white;
+        }
+        50%{
+            top:75px;
+            background-color: yellow;
+        }
+        70%{
+            top:150px;
+            background-color: black;
+
+        }
+    }
+
+    .blue-to-red{
+        width: 100px;
+        height: 200px;
+        background-color: blue;
+        /* transition-property: background-color;
+        transition-duration: 5000ms;
+        transition-timing-function: ease;
+        transition-delay: 2s; */
+        /* transition: background-color 1s ease; */
+        transition: all 1s ease;
+    }
+    .blue-to-red:hover{
+        background-color: #f00;
+        width: 200px;
+    }
+
+    .red{
+        background-color: red;
+        width: 100px;
+        height: 200px;
+    }
+    .blu{
+        background-color: blue;
+        width: 100px;
+        height: 200px;
+    }
+    .none{
+        border: 1px solid white;
+        width: 100px;
+        height: 200px;
+    }
+    #r:hover ~#n{
+        background-color: red;
+    }
+    div:last-child::after{
+        background-color: blue;
+    }
